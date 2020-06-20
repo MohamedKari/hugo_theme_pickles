@@ -10,6 +10,9 @@
       {{ range .Params.tags }}
       <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
       {{ end }}
+      <div class="c-time">
+        by {{ .Params.Author }}
+      </div>
     </div>
   </header>
   {{ with .Params.thumbnail }}
@@ -49,7 +52,6 @@
       </div>
     </nav>
     {{ partial "related.html" . }}
-    {{ partial "siteinfo.html" . }}
   </footer>
 </article>
 {{ partial "footer.html" . }}
