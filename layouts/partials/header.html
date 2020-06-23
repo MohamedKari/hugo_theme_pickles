@@ -4,8 +4,9 @@
 <body>
   <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
   {{ partial "svgpack-sprite.html" . }}
-  <header class="l-header">
+  <header class="l-header" style="max-width: 720px; margin: auto; text-align: left; padding: 20px 0 0 0 ;">
     {{ if .IsPage }}
+    <p class="home-button"><a href="{{ .Site.BaseURL }}" class="p-title__link">← Back to home</a></p>
     <p class="c-title p-title"><a href="{{ .Site.BaseURL }}" class="p-title__link">{{ .Site.Title }}</a></p>
     {{ else }}
     <h1 class="c-title p-title"><a href="{{ .Site.BaseURL }}" class="p-title__link">{{ .Site.Title }}</a></h1>
